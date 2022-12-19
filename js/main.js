@@ -31,3 +31,24 @@ function newcards (array, node){
 
 
 newcards(films, cardWrapper);
+
+
+
+let elFrom = document.querySelector('.form');
+let elInput = document.querySelector('input');
+
+let newArray=[];
+
+elFrom.addEventListener('input',(evt)=>{
+    evt.preventDefault();
+    cardWrapper.innerHTML=''
+    let elInputValue=elInput.value.toLocaleLowerCase();
+
+    films.forEach((el)=>{
+        if(el.title.toLocaleLowerCase().includes(elInputValue)){
+            newArray.push(el)
+        }
+    });
+    newcards(newArray, cardWrapper)
+    newArray=[]
+});
