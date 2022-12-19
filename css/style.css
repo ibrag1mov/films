@@ -1,0 +1,151 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #222933;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    background-color: #131A20;
+    z-index: 999;
+}
+
+.nav{
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.title{
+    margin: 0;
+}
+
+.title a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.form{
+    margin-left: auto;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.search{
+    width: 80%;
+    border: none;
+    color: #fff !important;
+    background-color:   #222933;
+}
+
+.search:focus{
+    background-color: #222933;
+    box-shadow: 0 0 1px 2.5px rgb(181, 181, 181);
+}
+
+.search::placeholder{
+    color: rgb(191, 191, 191);
+}
+
+.btn-search{
+    margin-left: 20px;
+}
+
+.btn-search,
+.btn-search:hover,
+.btn-search:active,
+.btn-search:focus{
+    color: #fff !important;
+    background-color: transparent !important;
+    border: 2px solid #0f8bde !important;
+}
+
+.btn-search:active,
+.btn-search:focus{
+    transform: scale(0.9);
+}
+
+.card-wrapper{
+    margin-top: 120px !important;
+}
+
+.card{
+    position: relative;
+    width: 30%;
+    height: 500px;
+    background-color: #131A20;
+}
+
+.more-btn{
+    position: absolute;
+    bottom: 15px;
+    left: 20px;
+}
+
+
+.text{
+    padding: 10px 15px;
+    text-align: justify;
+}
+
+
+.card-img{
+    height: 300px;
+    object-fit: contain;  
+    border-radius: 8px;  
+}
+
+.card-text{
+    display: none;
+    margin-bottom: 45px;
+}
+
+
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 768px) {
+    .form{
+        width: 60%;
+    }
+    .search{
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 418px) {
+    .form{
+        width: 60%;
+    }
+    .search{
+        width: 100%;
+    }
+    .btn-search{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 294px){
+    .nav{
+        height: 120px;
+        padding: 20px 0;
+        flex-direction: column;
+    }
+    .form{
+        width: 100%;
+    }
+    .title{
+        margin-bottom: 10px;
+    }
+}
