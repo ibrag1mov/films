@@ -81,7 +81,7 @@ header{
 .card{
     position: relative;
     width: 30%;
-    height: 500px;
+    /* height: 500px; */
     background-color: #131A20;
 }
 
@@ -105,7 +105,7 @@ header{
 }
 
 .card-text{
-    display: none;
+    /* display: none; */
     margin-bottom: 45px;
 }
 

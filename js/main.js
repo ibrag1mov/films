@@ -15,12 +15,12 @@ function newcards (array, node){
             </div>
             <h2 class="text-center my-3 text-white fs-4">${film.title}</h2>
             <div class=" card-text">
-                <p class="fs-6 text-primary text">
+                <p class="fs-6 text-white  text">
                 ${film.overview}
                 </p>
             </div>
            
-            <button type="button" class="btn btn-primary w-25 more-btn">More...</button>
+           
          
         `;
     
