@@ -52,3 +52,41 @@ elFrom.addEventListener('input',(evt)=>{
     newcards(newArray, cardWrapper)
     newArray=[]
 });
+
+
+let elSelect=$('#genres');
+
+let arr=[];
+
+films.forEach((item)=>{
+    item.genres.forEach((genres)=>{
+       if(!arr.includes(genres)){
+        arr.push(genres);
+    };
+})
+})
+
+for(i of arr){
+    let option=document.createElement('option');
+    option.value=i;
+    option.textContent=i;
+    elSelect.appendChild(option)
+}
+
+
+let newArr=[];
+elSelect.addEventListener('change',(e)=>{
+    newArr=[]
+
+if(elSelect.value!=="All"){
+    films.forEach((film)=>{
+        if(film.genres.includes(elSelect.value)){
+            newArr.push(film)
+        }
+    })
+    newcards(newArr, cardWrapper)
+}else{
+    newcards(films, cardWrapper)
+}
+    
+})
