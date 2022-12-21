@@ -119,12 +119,15 @@ elSelect2.addEventListener('change',(e)=>{
 
 
 let btnTop=$('.top');
+let elHead=$('.header');
 
 window.addEventListener("scroll", (e)=>{
-  if(window.scrollY > 100){
+  if(window.scrollY > 70){
     btnTop.style.display="block"
+    elHead.style.boxShadow="0 0 5px 3px #222933"
   }
   else{
     btnTop.style.display="none"
+    elHead.style.boxShadow="none"
   }
 })
