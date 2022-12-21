@@ -11,6 +11,22 @@ body{
     background-color: #222933;
 }
 
+body::-webkit-scrollbar{
+    width: 18px;
+    border-radius: 15px;
+    background-color: #202020;
+}
+
+body::-webkit-scrollbar-button{
+    display: none;
+}
+
+body::-webkit-scrollbar-thumb{
+    border-radius: 15px;
+    height: 80px;
+    background-color: #95afd3;
+}
+
 header{
     width: 100%;
     position: fixed;
@@ -76,7 +92,7 @@ header{
 }
 
 .card-wrapper{
-    padding-top: 150px !important;
+    padding: 150px 0 !important;
 }
 
 .card{
@@ -152,8 +168,110 @@ header{
     box-shadow: 0 0 1px 2.5px #a9a8a8;
 }
 
+.top{
+    display: none;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    z-index: 1000;
+    border: none;
+    box-shadow: 0 0 2px 2px red;
+    border-radius: 50%;
+    background-color: transparent;
+    animation: anime 15s linear infinite;
+  }
+  .topSvg{
+    animation: svgAnime 15s linear infinite;
+  }
 
+  @keyframes anime {
+    0%{
+      color:  rgb(119, 255, 0);
+       box-shadow: 0 0 5px 1px rgb(119, 255, 0);
+    }
 
+    15%{
+       color:  rgb(0, 255, 234);
+        box-shadow: 0 0 5px 1px  rgb(0, 255, 234);
+    }
+    25%{
+       color:  rgb(0, 21, 255);
+        box-shadow: 0 0 5px 1px  rgb(0, 21, 255);
+    }
+    35%{
+       color:  rgb(212, 0, 255);
+        box-shadow: 0 0 5px 1px rgb(212, 0, 255);
+    }
+    45%{
+    
+       color:  rgb(255, 0, 0);
+        box-shadow: 0 0 5px 1px  rgb(255, 0, 0);
+    }
+    55%{
+       color:  rgb(255, 234, 0);
+        box-shadow: 0 0 5px 1px  rgb(255, 234, 0);
+    }
+    65%{
+       color:  rgb(0, 255, 30);
+        box-shadow: 0 0 5px 1px rgb(0, 255, 30);
+    }
+    75%{
+       color:  rgb(0, 255, 162);
+        box-shadow: 0 0 5px 1px rgb(0, 255, 162);
+    }
+    85%{
+       color:  rgb(21, 0, 255);
+        box-shadow: 0 0 5px 1px  rgb(21, 0, 255);
+    }
+    94%{
+       color: rgb(255, 0, 204);
+        box-shadow: 0 0 5px 1px rgb(255, 0, 204);
+    }
+    100%{
+       color:  rgb(119, 255, 0);
+        box-shadow: 0 0 5px 1px rgb(119, 255, 0);
+    }
+}
+@keyframes svgAnime {
+    0%{
+      fill:  rgb(119, 255, 0);
+    }
+
+    15%{
+       fill:  rgb(0, 255, 234);
+    }
+    25%{
+       fill:  rgb(0, 21, 255);
+    }
+    35%{
+       fill:  rgb(212, 0, 255);
+    }
+    45%{
+    
+       fill:  rgb(255, 0, 0);
+    }
+    55%{
+       fill:  rgb(255, 234, 0);
+    }
+    65%{
+       fill:  rgb(0, 255, 30);
+    }
+    75%{
+       fill:  rgb(0, 255, 162);
+
+    }
+    85%{
+       fill:  rgb(21, 0, 255);
+    }
+    94%{
+       fill: rgb(255, 0, 204);
+    }
+    100%{
+       fill:  rgb(119, 255, 0);
+    }
+}
 
 /* RESPONSIVE */
 

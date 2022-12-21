@@ -116,3 +116,15 @@ elSelect2.addEventListener('change',(e)=>{
     
     e.preventDefault();
 })
+
+
+let btnTop=$('.top');
+
+window.addEventListener("scroll", (e)=>{
+  if(window.scrollY > 100){
+    btnTop.style.display="block"
+  }
+  else{
+    btnTop.style.display="none"
+  }
+})
